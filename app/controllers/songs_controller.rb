@@ -24,9 +24,10 @@ class SongsController < ApplicationController
   end
 
   get '/songs/:slug/edit' do
+    binding.params
     @song = Song.find_by_slug(params[:slug])
     @genres = Genre.all
-    binding.params
+
     erb :'songs/edit'
   end
 
