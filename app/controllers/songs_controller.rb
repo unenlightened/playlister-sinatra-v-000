@@ -25,7 +25,6 @@ class SongsController < ApplicationController
 
   get '/songs/:slug/edit' do
     @song = Song.find_by_slug(params[:slug])
-["blues", "greens", "reds", "rock"].each {|genre| Genre.create(name: genre)}
     @genres = Genre.all
     erb :'songs/edit'
   end
