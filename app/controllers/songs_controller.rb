@@ -31,8 +31,8 @@ class SongsController < ApplicationController
   end
 
   patch '/songs/bah' do
-   "Hello World"
- end
+    "Hello World"
+  end
 
   patch '/songs/:slug' do
     @song = Song.find_by_slug(params[:slug])
